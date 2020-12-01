@@ -51,19 +51,9 @@ public class KeyListenerPlugin extends AccessibilityService implements FlutterPl
       result.success(11);
     }
     else if(call.method.equals("checkAvailabilityPermission")){
-      System.out.println("STARTED");
       boolean res = setupPermission(context);
 
       result.success(res);
-    }else if(call.method.equals("connectToService")){
-      Intent service = new Intent(context, KeyListenerService.class);
-      context.startService(service);
-      System.out.println("SERVICE IS STARTED");
-
-      Intent keyDetectorService = new Intent(context, AccessibilityKeyDetector.class);
-      context.startService(keyDetectorService);
-
-      result.success(true);
     }
 
     else {
@@ -75,19 +65,18 @@ public class KeyListenerPlugin extends AccessibilityService implements FlutterPl
     int accessEnabled=0;
     try {
       accessEnabled = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
+      System.out.println("ACCESS ENABLED "+accessEnabled);
     } catch (Settings.SettingNotFoundException e) {
       e.printStackTrace();
     }
-    if (accessEnabled==0) {
+
       /** if not construct intent to request permission */
       Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       /** request permission via start activity for result */
       context.startActivity(intent);
       return false;
-    } else {
-      return true;
-    }
+
   }
 
   @Override

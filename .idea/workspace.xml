@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bee58a35-c16e-48b1-a0e1-5f605fa62060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/android/settings_aar.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/KeyListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/service/AccessibilityKeyDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/service/AccessibilityKeyDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/xml/accessibility_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/xml/accessibility_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/xml/accessibility_layout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/key_listener_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key_listener_plugin.dart" afterDir="false" />
     </list>
@@ -40,7 +32,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/android/app/src/main/res" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -49,6 +41,7 @@
       <recent name="com.emrereyhanlioglu.key_listener_plugin_example.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FlutterTestProjects\key_listener_plugin\example\android\app\src\main\java\com\emrereyhanlioglu\key_listener_plugin_example" />
       <recent name="D:\FlutterTestProjects\key_listener_plugin\example\android\app\src\main\res" />
     </key>
   </component>
@@ -140,26 +133,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="356" y="198" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1606808038646" />
-    <state width="1502" height="402" key="GridCell.Tab.0.bottom" timestamp="1606816711522">
+    <state width="1489" height="402" key="GridCell.Tab.0.bottom" timestamp="1606821068405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1502" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
-    <state width="1502" height="402" key="GridCell.Tab.0.center" timestamp="1606816711522">
+    <state width="1489" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606821068405" />
+    <state width="1489" height="402" key="GridCell.Tab.0.center" timestamp="1606821068405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1502" height="402" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
-    <state width="1502" height="402" key="GridCell.Tab.0.left" timestamp="1606816711522">
+    <state width="1489" height="402" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606821068405" />
+    <state width="1489" height="402" key="GridCell.Tab.0.left" timestamp="1606821068405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1502" height="402" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
-    <state width="1502" height="402" key="GridCell.Tab.0.right" timestamp="1606816711522">
+    <state width="1489" height="402" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606821068405" />
+    <state width="1489" height="402" key="GridCell.Tab.0.right" timestamp="1606821068405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1502" height="402" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
+    <state width="1489" height="402" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606821068405" />
     <state x="392" y="332" key="Vcs.Push.Dialog.v2" timestamp="1606808047405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
