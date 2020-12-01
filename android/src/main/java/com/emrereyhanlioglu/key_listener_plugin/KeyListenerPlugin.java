@@ -1,7 +1,9 @@
 package com.emrereyhanlioglu.key_listener_plugin;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
@@ -48,13 +50,14 @@ public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler {
       System.out.println("STARTED");
 
       MainActivity mainActivity = new MainActivity();
-      result.success(mainActivity.checkAccessibilityPermission());
+      result.success(mainActivity.checkAccessibilityPermission(context));
     }
     else {
       result.notImplemented();
     }
   }
 
+  @TargetApi(Build.VERSION_CODES.CUPCAKE)
   private boolean setupPermission(Context context){
     int accessEnabled=0;
     try {

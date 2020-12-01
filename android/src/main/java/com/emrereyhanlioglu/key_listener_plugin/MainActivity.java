@@ -1,5 +1,6 @@
 package com.emrereyhanlioglu.key_listener_plugin;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -8,21 +9,24 @@ import android.view.KeyEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import io.flutter.embedding.android.FlutterActivity;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends FlutterActivity {
 
     private final String TAG = "Test";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        checkAccessibilityPermission();
+        checkAccessibilityPermission(getContext());
+
     }
 
-    public boolean checkAccessibilityPermission() {
+    public boolean checkAccessibilityPermission(Context context) {
         int accessEnabled=0;
         try {
-            accessEnabled = Settings.Secure.getInt(this.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
+            accessEnabled = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
         } catch (Settings.SettingNotFoundException e) {
         e.printStackTrace();
     }
