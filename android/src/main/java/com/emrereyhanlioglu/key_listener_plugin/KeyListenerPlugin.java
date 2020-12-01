@@ -25,14 +25,13 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** KeyListenerPlugin */
-public class KeyListenerPlugin extends AccessibilityService implements FlutterPlugin, MethodCallHandler, ActivityAware {
+public class KeyListenerPlugin extends AccessibilityService implements FlutterPlugin, MethodCallHandler {
   /// The MethodChannel that will the communication between Flutter and native Android
   //  ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
   private Context context;
-  private Activity activity;
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -84,28 +83,6 @@ public class KeyListenerPlugin extends AccessibilityService implements FlutterPl
     channel.setMethodCallHandler(null);
   }
 
-
-  /// Activity methods
-  @Override
-  public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
-    activity = binding.getActivity();
-
-  }
-
-  @Override
-  public void onDetachedFromActivityForConfigChanges() {
-
-  }
-
-  @Override
-  public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
-
-  }
-
-  @Override
-  public void onDetachedFromActivity() {
-
-  }
 
   private final String TAG = "AccessKeyDetector";
 
