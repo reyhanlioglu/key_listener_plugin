@@ -28,9 +28,11 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       platformVersion = await KeyListenerPlugin.platformVersion;
+      await KeyListenerPlugin.connectToService();
+      print('CONNECTED TO THE SERVICE');
       int test = await KeyListenerPlugin.getKeyStream();
       print('TEST VALUE IS $test');
-      bool res = await KeyListenerPlugin.listenKeyEvents();
+      bool res = await KeyListenerPlugin.checkAvailabilityPermission();
       print('PERMISSION RESULT IS $res');
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';

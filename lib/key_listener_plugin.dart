@@ -28,4 +28,9 @@ class KeyListenerPlugin {
     final bool hasPermission = await _channel.invokeMethod('listenKeyEvents');
     return hasPermission;
   }
+
+  static Future<void> connectToService() async {
+    print('STARTING HERE');
+    await _channel.invokeMethod('connectToService');
+  }
 }

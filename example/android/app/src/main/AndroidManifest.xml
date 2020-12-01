@@ -5,6 +5,9 @@
          In most cases you can leave this as-is, but you if you want to provide
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
+
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="key_listener_plugin_example"
@@ -40,7 +43,8 @@
         </activity>
 
         <service android:name=".service.AccessibilityKeyDetector"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            >
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>

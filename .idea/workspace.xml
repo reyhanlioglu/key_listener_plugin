@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bee58a35-c16e-48b1-a0e1-5f605fa62060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/android/settings_aar.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/KeyListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/emrereyhanlioglu/key_listener_plugin_example/service/AccessibilityKeyDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/service/AccessibilityKeyDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/xml/accessibility_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/xml/accessibility_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/key_listener_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key_listener_plugin.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +28,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1l0skoTcG2ADjp0IO8Yim0nDatN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/example/android/app/src/main/res" />
@@ -102,29 +116,54 @@
       <option name="presentableId" value="Default" />
       <updated>1606745488510</updated>
     </task>
+    <task id="LOCAL-00001" summary="BUGFIX: Compiling">
+      <created>1606808040639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606808040639</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="BUGFIX: Compiling" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUGFIX: Compiling" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2692" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606745612578">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2692" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606745612578" />
-    <state width="1222" height="402" key="GridCell.Tab.0.bottom" timestamp="1606749829438">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="356" y="198" key="CommitChangelistDialog2" timestamp="1606808038646">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="356" y="198" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1606808038646" />
+    <state width="1502" height="402" key="GridCell.Tab.0.bottom" timestamp="1606816711522">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1222" height="402" key="GridCell.Tab.0.center" timestamp="1606749829438">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1502" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
+    <state width="1502" height="402" key="GridCell.Tab.0.center" timestamp="1606816711522">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1222" height="402" key="GridCell.Tab.0.left" timestamp="1606749829438">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1502" height="402" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
+    <state width="1502" height="402" key="GridCell.Tab.0.left" timestamp="1606816711522">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
-    <state width="1222" height="402" key="GridCell.Tab.0.right" timestamp="1606749829438">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1502" height="402" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
+    <state width="1502" height="402" key="GridCell.Tab.0.right" timestamp="1606816711522">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1222" height="402" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
+    <state width="1502" height="402" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606816711522" />
+    <state x="392" y="332" key="Vcs.Push.Dialog.v2" timestamp="1606808047405">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="392" y="332" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606808047405" />
     <state x="447" y="438" key="com.intellij.ide.util.TipDialog" timestamp="1606806517624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

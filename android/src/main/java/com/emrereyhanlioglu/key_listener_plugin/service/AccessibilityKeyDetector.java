@@ -1,4 +1,4 @@
-package com.emrereyhanlioglu.key_listener_plugin_example.service;
+package com.emrereyhanlioglu.key_listener_plugin.service;
 
 import android.accessibilityservice.AccessibilityService;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.emrereyhanlioglu.key_listener_plugin_example;
+package com.emrereyhanlioglu.key_listener_plugin;
 
 import android.app.Service;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class KeyListenerService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
+        System.out.println("ON START SERVICE CALLED");
 
         return super.onStartCommand(intent, flags, startId);
     }
