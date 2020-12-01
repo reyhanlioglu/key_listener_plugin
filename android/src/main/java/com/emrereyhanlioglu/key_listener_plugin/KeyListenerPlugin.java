@@ -15,9 +15,12 @@ import androidx.annotation.NonNull;
 
 import com.emrereyhanlioglu.key_listener_plugin.service.AccessibilityKeyDetector;
 
+import java.util.stream.IntStream;
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
+import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -25,7 +28,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** KeyListenerPlugin */
-public class KeyListenerPlugin extends AccessibilityService implements FlutterPlugin, MethodCallHandler {
+public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
   /// The MethodChannel that will the communication between Flutter and native Android
   //  ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -33,28 +36,23 @@ public class KeyListenerPlugin extends AccessibilityService implements FlutterPl
   private MethodChannel channel;
   private Context context;
 
+
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "key_listener_plugin");
     channel.setMethodCallHandler(this);
      context = flutterPluginBinding.getApplicationContext();
 
+    EventChannel eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "keyStream");
+    eventChannel.setStreamHandler(this);
   }
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
-    if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
-    }
-    else if(call.method.equals("getKeyStream")){
-      result.success(11);
-    }
-    else if(call.method.equals("checkAvailabilityPermission")){
+     if(call.method.equals("checkAvailabilityPermission")){
       boolean res = setupPermission(context);
-
       result.success(res);
     }
-
     else {
       result.notImplemented();
     }
@@ -84,30 +82,16 @@ public class KeyListenerPlugin extends AccessibilityService implements FlutterPl
   }
 
 
-  private final String TAG = "AccessKeyDetector";
-
+  /// Stream methods
   @Override
-  public boolean onKeyEvent(KeyEvent event) {
-    Log.d(TAG,"Key pressed via accessibility is: "+event.getKeyCode());
-    //This allows the key pressed to function normally after it has been used by your app.
-    return super.onKeyEvent(event);
-  }
-
-
-  @Override
-  protected void onServiceConnected() {
-    Log.i(TAG,"Service connected");
-
+  public void onListen(Object arguments, EventChannel.EventSink events) {
+    System.out.println("ON LISTEN CALLED");
+    AccessibilityKeyDetector.mEventSink = events;
   }
 
   @Override
-  public void onAccessibilityEvent(AccessibilityEvent event) {
-
+  public void onCancel(Object arguments) {
+    AccessibilityKeyDetector.mEventSink = null;
   }
 
-
-  @Override
-  public void onInterrupt() {
-
-  }
 }

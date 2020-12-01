@@ -6,15 +6,7 @@ class KeyListenerPlugin {
   static const MethodChannel _channel =
       const MethodChannel('key_listener_plugin');
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-
-  static Future<int> getKeyStream() async {
-    final int keyStream = await _channel.invokeMethod('getKeyStream');
-    return keyStream;
-  }
+  static Stream<int> _keyStream;
 
   static Future<bool> checkAvailabilityPermission() async {
     print('STARTING HERE');
@@ -23,9 +15,13 @@ class KeyListenerPlugin {
     return hasPermission;
   }
 
-  static Future<bool> listenKeyEvents() async {
-    print('STARTING HERE');
-    final bool hasPermission = await _channel.invokeMethod('listenKeyEvents');
-    return hasPermission;
+  static Stream<int> get keyStream {
+    EventChannel _eventChannel = const EventChannel('keyStream');
+    if (_keyStream == null) {
+      _keyStream =
+          _eventChannel.receiveBroadcastStream().map<int>((event) => event);
+    }
+
+    return _keyStream;
   }
 }

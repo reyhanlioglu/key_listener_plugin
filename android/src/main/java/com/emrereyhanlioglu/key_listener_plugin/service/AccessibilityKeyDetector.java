@@ -5,14 +5,24 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 
-public class AccessibilityKeyDetector extends AccessibilityService {
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.EventChannel;
+
+public class AccessibilityKeyDetector extends AccessibilityService implements   EventChannel.StreamHandler {
 
     private final String TAG = "AccessKeyDetector";
+    public static EventChannel.EventSink mEventSink = null;
 
     @Override
     public boolean onKeyEvent(KeyEvent event) {
-        Log.d(TAG,"Key pressed via accessibility is: "+event.getKeyCode());
         //This allows the key pressed to function normally after it has been used by your app.
+        if(mEventSink != null){
+            System.out.println("Key event " +event.getKeyCode()+" is added into stream");
+            mEventSink.success(event.getKeyCode());
+        }
+
         return super.onKeyEvent(event);
     }
 
@@ -33,4 +43,17 @@ public class AccessibilityKeyDetector extends AccessibilityService {
     public void onInterrupt() {
 
     }
+
+    /// Stream methods
+    @Override
+    public void onListen(Object arguments, EventChannel.EventSink events) {
+        mEventSink = events;
+    }
+
+    @Override
+    public void onCancel(Object arguments) {
+        mEventSink = null;
+    }
+
+
 }
