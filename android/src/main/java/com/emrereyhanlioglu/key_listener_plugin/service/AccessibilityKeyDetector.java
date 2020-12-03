@@ -31,7 +31,8 @@ public class AccessibilityKeyDetector extends AccessibilityService implements   
            intent.setAction("android.intent.action.RUN")
                    .setPackage("com.blueoperation_mobile")
                    .setComponent(new ComponentName("com.blueoperation_mobile","io.flutter.embedding.android.FlutterActivity"))
-                   .putExtra("route", "sos");
+                   .putExtra("route", "sos")
+                   .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);;
            startActivity(intent);
        }
 
