@@ -1,6 +1,8 @@
 package com.emrereyhanlioglu.key_listener_plugin.service;
 
 import android.accessibilityservice.AccessibilityService;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
@@ -22,6 +24,17 @@ public class AccessibilityKeyDetector extends AccessibilityService implements   
             System.out.println("Key event " +event.getKeyCode()+" is added into stream");
             mEventSink.success(event.getKeyCode());
         }
+
+        /// TODO: Change keyCode to 286
+       if(event.getKeyCode() == 24){
+           Intent intent = new Intent();
+           intent.setAction("android.intent.action.RUN")
+                   .setPackage("com.blueoperation_mobile")
+                   .setComponent(new ComponentName("com.blueoperation_mobile","io.flutter.embedding.android.FlutterActivity"))
+                   .putExtra("route", "sos");
+           startActivity(intent);
+       }
+
 
         return super.onKeyEvent(event);
     }
