@@ -26,7 +26,7 @@ public class AccessibilityKeyDetector extends AccessibilityService implements   
         }
 
         /// TODO: Change keyCode to 286
-       if(event.getKeyCode() == 24){
+       if(event.getKeyCode() == 286){
            Intent intent = new Intent();
            intent.setAction("android.intent.action.RUN")
                    .setPackage("com.blueoperation_mobile")
