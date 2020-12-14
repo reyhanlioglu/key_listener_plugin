@@ -59,11 +59,6 @@ public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, Even
   }
 
   private boolean setupPermission(Context context){
-    Settings.Secure.putString(context.getContentResolver(),
-            Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES, "com.emrereyhanlioglu.key_listener_plugin/.service.AccessibilityKeyDetector");
-    Settings.Secure.putString(context.getContentResolver(),
-            Settings.Secure.ACCESSIBILITY_ENABLED, "1");
-
     int accessEnabled=0;
     try {
       accessEnabled = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
