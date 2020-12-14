@@ -1,31 +1,28 @@
 package com.emrereyhanlioglu.key_listener_plugin;
 
+
 import android.accessibilityservice.AccessibilityService;
-import android.annotation.TargetApi;
-import android.app.Activity;
+import android.accessibilityservice.AccessibilityServiceInfo;
+import android.app.UiAutomation;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.content.pm.ServiceInfo;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.NonNull;
-
 import com.emrereyhanlioglu.key_listener_plugin.service.AccessibilityKeyDetector;
 
-import java.util.stream.IntStream;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
-import io.flutter.embedding.engine.plugins.activity.ActivityAware;
-import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+
 
 /** KeyListenerPlugin */
 public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
@@ -50,30 +47,37 @@ public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, Even
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
      if(call.method.equals("checkAvailabilityPermission")){
-      boolean res = setupPermission(context);
-      result.success(res);
+      setupPermission(context);
     }
     else {
       result.notImplemented();
     }
   }
 
-  private boolean setupPermission(Context context){
-    int accessEnabled=0;
-    try {
-      accessEnabled = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
-      System.out.println("ACCESS ENABLED "+accessEnabled);
-    } catch (Settings.SettingNotFoundException e) {
-      e.printStackTrace();
+  public static boolean isAccessibilityServiceEnabled(Context context, Class<? extends AccessibilityService> service) {
+    AccessibilityManager am = (AccessibilityManager) context.getSystemService(Context.ACCESSIBILITY_SERVICE);
+    List<AccessibilityServiceInfo> enabledServices = am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK);
+
+    for (AccessibilityServiceInfo enabledService : enabledServices) {
+      ServiceInfo enabledServiceInfo = enabledService.getResolveInfo().serviceInfo;
+      if (enabledServiceInfo.packageName.equals(context.getPackageName()) && enabledServiceInfo.name.equals(service.getName()))
+        return true;
     }
 
+    return false;
+  }
+
+
+
+  private void setupPermission(Context context){
+
+    if(isAccessibilityServiceEnabled(context, AccessibilityKeyDetector.class)){
       /** if not construct intent to request permission */
       Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       /** request permission via start activity for result */
       context.startActivity(intent);
-      return false;
-
+    }
   }
 
   @Override

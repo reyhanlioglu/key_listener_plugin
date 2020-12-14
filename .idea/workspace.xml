@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bee58a35-c16e-48b1-a0e1-5f605fa62060" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/emrereyhanlioglu/key_listener_plugin/KeyListenerPlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606831911099</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="REMOVE: Test code is removed">
+      <created>1607942360649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607942360649</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,18 +141,19 @@
     <MESSAGE value="BUGFIX: Compiling" />
     <MESSAGE value="UPDATE: Key listener plugin is working" />
     <MESSAGE value="UPDATE: Key listener plugin's basic functionality is completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Key listener plugin's basic functionality is completed" />
+    <MESSAGE value="REMOVE: Test code is removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="REMOVE: Test code is removed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2692" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606745612578">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2692" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606745612578" />
-    <state x="356" y="198" key="CommitChangelistDialog2" timestamp="1607942341091">
+    <state x="356" y="198" key="CommitChangelistDialog2" timestamp="1607942359212">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="356" y="198" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606831909035" />
-    <state x="356" y="198" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1607942341091" />
+    <state x="356" y="198" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1607942359212" />
     <state width="1489" height="453" key="GridCell.Tab.0.bottom" timestamp="1606832041050">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -169,11 +178,11 @@
     <state width="1489" height="453" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606832041050" />
     <state width="1222" height="402" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606749829438" />
     <state width="1489" height="402" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606821786722" />
-    <state x="392" y="332" key="Vcs.Push.Dialog.v2" timestamp="1607940476443">
+    <state x="392" y="332" key="Vcs.Push.Dialog.v2" timestamp="1607942368541">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="392" y="332" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1606831914898" />
-    <state x="392" y="332" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1607940476443" />
+    <state x="392" y="332" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1607942368541" />
     <state x="447" y="438" key="com.intellij.ide.util.TipDialog" timestamp="1607003421364">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
