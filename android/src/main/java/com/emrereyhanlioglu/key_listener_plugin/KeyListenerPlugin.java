@@ -47,7 +47,8 @@ public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, Even
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
      if(call.method.equals("checkAvailabilityPermission")){
-      setupPermission(context);
+      boolean res = setupPermission(context);
+      result.success(res);
     }
     else {
       result.notImplemented();
@@ -69,15 +70,22 @@ public class KeyListenerPlugin implements FlutterPlugin, MethodCallHandler, Even
 
 
 
-  private void setupPermission(Context context){
+  private boolean setupPermission(Context context){
+    int accessEnabled=0;
+    try {
+      accessEnabled = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.ACCESSIBILITY_ENABLED);
+      System.out.println("ACCESS ENABLED "+accessEnabled);
+    } catch (Settings.SettingNotFoundException e) {
+      e.printStackTrace();
+    }
 
-    if(isAccessibilityServiceEnabled(context, AccessibilityKeyDetector.class)){
       /** if not construct intent to request permission */
       Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       /** request permission via start activity for result */
       context.startActivity(intent);
-    }
+      return false;
+
   }
 
   @Override
